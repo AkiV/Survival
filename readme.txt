@@ -1,0 +1,1 @@
+A survival game where you control a vehicle and shoot at incoming aliens. PowerUps and explosions included. This was a fun hobby project to test some mathematics and to implement stack-based Finite-State Machine AI.
