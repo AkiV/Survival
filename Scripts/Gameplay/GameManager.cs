@@ -18,12 +18,12 @@ public class GameManager : MonoBehaviour
     float survivalTime = 0.0f;
     bool isRunning = true;
 
-	void Awake() 
+    void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         GameUI = GameObject.Find("UI").GetComponent<GameUI>();
         gameArea = GameObject.Find("GameArea").GetComponent<Circle>();
-	}
+    }
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         spawners.Add(new PowerUpSpawner(PowerUpPrefabs, gameArea));
     }
 	
-	void Update() 
+    void Update() 
     {
         if (isRunning)
         {
@@ -56,5 +56,5 @@ public class GameManager : MonoBehaviour
         {
             Application.LoadLevel(0);
         }
-	}
+    }
 }
