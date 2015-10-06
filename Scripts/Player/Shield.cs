@@ -9,23 +9,23 @@ public class Shield : MonoBehaviour, IDamageable
     GameObject player;
     Material material;
 
-	void Awake() 
+    void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
         material = GetComponent<Renderer>().material;
 
         force = maxForce;
         GameManager.GameUI.UpdateShield(1.0f);
-	}
+    }
 
     float offset = 1.0f;
 
-	void Update() 
+    void Update() 
     {
         offset += Time.deltaTime * 0.75f;
         transform.position = player.transform.position;
         material.SetTextureOffset("_MainTex", new Vector2(0.0f, offset));
-	}
+    }
 
     public void Damage(int amount)
     {
