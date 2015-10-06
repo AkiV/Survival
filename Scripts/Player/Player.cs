@@ -22,13 +22,13 @@ public class Player : MonoBehaviour, IDamageable
 
     private float inputDeadZone = 0.5f;
 
-	void Awake() 
+    void Awake() 
     {
         status = GetComponent<CombatStatus>();
         controller = GetComponent<PlayerController>();
         Weapon = new PlasmaWeapon(BulletPrefab);
         BombCount = 1;
-	}
+    }
 	
     void FixedUpdate()
     {
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour, IDamageable
         }
     }
 
-	void Update()
+    void Update()
     {
         Weapon.Update();
 
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour, IDamageable
         {
             LaunchBomb();
         }
-	}
+    }
 
     public void IncreaseBombs()
     {
