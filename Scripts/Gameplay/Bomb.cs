@@ -8,7 +8,7 @@ public class Bomb : MonoBehaviour
 
     float speed = 0.0f;
 
-	void Awake() 
+    void Awake() 
     {
         particles = GetComponent<ParticleSystem>();
         sphereCollider = GetComponent<SphereCollider>();
@@ -17,7 +17,7 @@ public class Bomb : MonoBehaviour
         StartCoroutine(Flash());
 	}
 	
-	void Update() 
+    void Update() 
     {
         if (particles.isPlaying)
         {
@@ -28,7 +28,7 @@ public class Bomb : MonoBehaviour
             sphereCollider.enabled = false;
             StartCoroutine(FinishAndDestroy());
         }   
-	}
+    }
 
     void OnTriggerEnter(Collider col)
     {
