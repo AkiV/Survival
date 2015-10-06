@@ -30,7 +30,7 @@ public partial class Enemy : MonoBehaviour, IDamageable
         cerebrum = new Cerebrum(this.gameObject);
     }
 
-	void Update()
+    void Update()
     {
         if (status.IsDead)
             return;
