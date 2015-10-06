@@ -15,7 +15,7 @@ public class Bomb : MonoBehaviour
         speed = particles.startSpeed - particles.startSize;
 
         StartCoroutine(Flash());
-	}
+    }
 	
     void Update() 
     {
