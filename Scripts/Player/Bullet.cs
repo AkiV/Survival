@@ -9,17 +9,17 @@ public class Bullet : MonoBehaviour
 
     const float NEAR_HIT_DISTANCE = 2f;
 
-	void Awake() 
+    void Awake() 
     {
         body = GetComponent<Rigidbody>();
         gameArea = GameObject.Find("GameArea").GetComponent<Circle>();
-	}
+    }
 	
-	void FixedUpdate() 
+    void FixedUpdate() 
     {
         Vector3 move = (transform.forward * 30f * Time.deltaTime);
         body.MovePosition(body.position + move);
-	}
+    }
 
     void Update()
     {
